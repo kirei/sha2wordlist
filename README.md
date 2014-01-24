@@ -1,6 +1,6 @@
 # sha2wordlist
 
-_sha2wordlist_ digests STDIN and producses a SHA-256 checksum displayed as a [PGP words](https://en.wikipedia.org/wiki/PGP_Words).
+_sha2wordlist_ digests STDIN and output a SHA-256 checksum displayed as [PGP words](https://en.wikipedia.org/wiki/PGP_Words).
 
 ## Example Output
 
