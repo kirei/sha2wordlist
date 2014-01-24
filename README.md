@@ -1,4 +1,3 @@
-sha2wordlist
-============
+# sha2wordlist
 
-SHA-2 Wordlist
+Create a SHA-256 and display as a PGP wordlist.
