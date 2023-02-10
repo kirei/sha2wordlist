@@ -27,6 +27,8 @@ import hashlib
 import sys
 from typing import List
 
+BUFLEN = 16384
+
 # https://en.wikipedia.org/wiki/PGP_word_list
 # https://philzimmermann.com/docs/PGP_word_list.pdf
 WORDS = [
@@ -305,7 +307,14 @@ def pgp_wordlist(data: bytes) -> List[str]:
 def main() -> None:
     """Main function"""
     h = hashlib.new("sha256")
-    h.update(sys.stdin.buffer.read())
+
+    while data:
+        data = sys.stdin.buffer.read(BUFLEN)
+        if data:
+            h.update(data)
+        else:
+            break
+
     words = " ".join(pgp_wordlist(h.digest()))
     print("SHA-256:    ", h.hexdigest())
     print("PGP Words:  ", words)
