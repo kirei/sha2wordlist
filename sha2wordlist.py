@@ -308,7 +308,7 @@ def main() -> None:
     """Main function"""
     h = hashlib.new("sha256")
 
-    while data:
+    while True:
         data = sys.stdin.buffer.read(BUFLEN)
         if data:
             h.update(data)
