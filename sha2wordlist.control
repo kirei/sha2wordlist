@@ -1,0 +1,7 @@
+Package: sha2wordlist
+Architecture: _ARCH_
+Maintainer: Kirei AB
+Priority: optional
+Version: 1.0.0
+Depends: libbsd0
+Description: SHA-2 Wordlist Generator

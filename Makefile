@@ -16,3 +16,6 @@ clean::
 
 indent::
 	indent $(INDENT_OPTS) < sha2wordlist.c
+
+sha2wordlist.deb: $(PROG)
+	sh deb.sh
