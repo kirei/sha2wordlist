@@ -1,2 +1,3 @@
 *.o
+*.deb
 sha2wordlist
